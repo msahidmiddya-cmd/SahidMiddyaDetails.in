@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sahid | Professional Profile</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  color:#fff;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:30px;
+}
+
+/* HERO */
+.hero{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:30px;
+  margin-bottom:80px;
+}
+
+.profile-pic{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  border:4px solid #00ffd5;
+  object-fit:cover;
+  background:#111;
+}
+
+.upload-btn{
+  margin-top:10px;
+}
+
+.upload-btn input{
+  display:none;
+}
+
+.upload-btn label{
+  padding:8px 16px;
+  background:#00ffd5;
+  color:#000;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.hero-text h1{
+  font-size:42px;
+}
+
+.hero-text span{
+  color:#00ffd5;
+}
+
+.hero-text p{
+  margin-top:10px;
+  opacity:0.9;
+}
+
+/* SECTION */
+section{
+  margin-bottom:80px;
+}
+
+section h2{
+  font-size:32px;
+  margin-bottom:30px;
+  color:#00ffd5;
+}
+
+/* ABOUT */
+.about{
+  font-size:16px;
+  line-height:1.8;
+  opacity:0.9;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+}
+
+.skill{
+  background:rgba(255,255,255,0.08);
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+}
+
+/* SERVICES */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.service{
+  background:rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:14px;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.project{
+  background:rgba(255,255,255,0.08);
+  padding:20px;
+  border-radius:14px;
+}
+
+/* CONTACT */
+.contact p{
+  margin-bottom:10px;
+}
+
+.contact a{
+  color:#00ffd5;
+  text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  opacity:0.7;
+  padding:20px 0;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <img src="" id="profileImage" class="profile-pic">
+      <div class="upload-btn">
+        <label for="imageInput">Upload Photo</label>
+        <input type="file" id="imageInput" accept="image/*">
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <h1>Hi, I’m <span>Sahid</span></h1>
+      <h3>Web Developer & Digital Creator</h3>
+      <p>I build modern, clean & professional websites that grow businesses.</p>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section>
+    <h2>About Me</h2>
+    <p class="about">
+      I am Sahid, a passionate web developer focused on building fast,
+      responsive and aesthetic websites. I believe in clean UI, modern
+      design and user-friendly experience.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill">HTML</div>
+      <div class="skill">Web Developer
+      </div>
+      <div class="skill">Website Design</div>
+      <div class="skill">Social Media Growth</div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service">🌐 Professional Website Design</div>
+      <div class="service">📱 Instagram Growth Services</div>
+      <div class="service">🎨 UI / Frontend Design</div>
+      <div class="service">🛠️ Website Fix & Update</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">Personal Profile Website</div>
+      <div class="project">Instagram Followers Website</div>
+      <div class="project">Mini Web Games</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section>
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <p>Email: sahid@email.com</p>
+      <p>Instagram: <a href="#">@sahid</a></p>
+      <p>Telegram: <a href="#">@sahid</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Sahid | Made with ❤️
+  </footer>
+
+</div>
+
+<script>
+document.getElementById("imageInput").addEventListener("change", function(e){
+  const file = e.target.files[0];
+  if(file){
+    const reader = new FileReader();
+    reader.onload = function(){
+      document.getElementById("profileImage").src = reader.result;
+    }
+    reader.readAsDataURL(file);
+  }
+});
+</script>
+
+</body>
+  </html>
+  
